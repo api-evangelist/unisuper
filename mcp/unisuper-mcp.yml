@@ -1,0 +1,23 @@
+name: UniSuper MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: absent
+note: >-
+  No official UniSuper MCP server (remote or local) was found, and no candidate tool list could be
+  derived because UniSuper publishes no OpenAPI or other API contract (pre-flight contract discovery:
+  openapi/asyncapi/graphql/mcp all absent on www.unisuper.com.au, join.unisuper.com.au,
+  memberonline.unisuper.com.au). A web search for a UniSuper MCP server or developer API returned only
+  unrelated projects. https://www.unisuper.com.au/.well-known/mcp.json answered HTTP 200 with an
+  anti-bot interstitial HTML page ("Pardon Our Interruption"), not an MCP document.
+checked:
+- url: https://www.unisuper.com.au/.well-known/mcp.json
+  status: 200
+  result: HTML anti-bot interstitial, not JSON
+- url: https://www.unisuper.com.au/llms.txt
+  status: 404
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

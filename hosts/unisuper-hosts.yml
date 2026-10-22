@@ -1,0 +1,106 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 3
+  other_domain: 3
+  platform: 2
+  roles:
+  - api
+  - identity
+  - other
+  - website
+hosts:
+- host: api.com.au
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.com.au
+  role: api
+  relation: other-domain
+- host: api.google.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: google.com
+  role: api
+  relation: other-domain
+- host: apps.apple.com
+  found_by:
+  - pointer
+  types:
+  - iOSApp
+  serves: []
+  registrable_domain: apple.com
+  role: other
+  relation: platform
+- host: join.unisuper.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  serves: []
+  registrable_domain: unisuper.com.au
+  role: identity
+  relation: own
+- host: memberonline.unisuper.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: unisuper.com.au
+  role: identity
+  relation: own
+- host: play.google.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - AndroidApp
+  serves: []
+  registrable_domain: google.com
+  role: other
+  relation: other-domain
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.unisuper.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - About
+  - Support
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  - Careers
+  serves:
+  - cdn
+  vendor: imperva
+  registrable_domain: unisuper.com.au
+  role: website
+  relation: own

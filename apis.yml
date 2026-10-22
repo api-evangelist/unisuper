@@ -1,23 +1,108 @@
 aid: unisuper
+
 name: UniSuper
-description: 'UniSuper is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: UniSuper is an Australian superannuation (retirement savings) fund, originally for employees in the higher education and research sector, offering accumulation super accounts, retirement income and pension products, investment options, insurance through super and financial advice. Its website states it has helped Australians prepare for retirement since 1982 and does not pay profits to shareholders or commissions to advisers. UniSuper does not publish a public developer portal or API documentation; members, employers and advisers use its online portals and mobile app.
+
 url: https://raw.githubusercontent.com/api-evangelist/unisuper/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Superannuation
+- Retirement
+- Pensions
+- Investments
+- Financial Services
+- Insurance
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://media.licdn.com/dms/image/v2/D560BAQE_ErqyAuD4Fw/company-logo_200_200/B56ZcUggqRG0AI-/0/1748395756867/unisuper_logo?e=2147483647&v=beta&t=04nOLaJLo-uFP4u7NqkLXLcz7fUo6P2aAucvMa81GjQ
+
 common:
+- type: Plans
+  url: plans/unisuper-plans-pricing.yml
+- type: Hosts
+  url: hosts/unisuper-hosts.yml
+- type: Vendors
+  url: vendors/unisuper-vendors.yml
+- type: DomainSecurity
+  url: security/unisuper-domain-security.yml
 - type: Website
-  url: https://unisuper.com.au/
+  url: https://www.unisuper.com.au/
+- type: About
+  url: https://www.unisuper.com.au/about-us/who-we-are
+- type: Support
+  url: https://www.unisuper.com.au/contact-us
+- type: Blog
+  url: https://www.unisuper.com.au/news-and-insights
+- type: Pricing
+  url: https://www.unisuper.com.au/super/fees-and-costs
+- type: SignUp
+  url: https://join.unisuper.com.au/personal-account/get-started
+- type: Login
+  url: https://memberonline.unisuper.com.au/
+- type: TermsOfService
+  url: https://www.unisuper.com.au/about-us/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.unisuper.com.au/about-us/privacy/privacy-statement
+- type: Careers
+  url: https://www.unisuper.com.au/about-us/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/unisuper
+- type: iOSApp
+  url: https://apps.apple.com/au/app/unisuper/id1614758946
+- type: AndroidApp
+  url: https://play.google.com/store/apps/details?id=au.com.unisuper
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Identity verified from the rendered www.unisuper.com.au homepage (title "An award-winning superannuation fund | UniSuper"). Plain HTTP GETs to www.unisuper.com.au receive an Imperva "Pardon Our Interruption" interstitial (200, 6183 bytes); a headless browser renders the real pages, so site pointers were verified by render. No developer portal, API docs or GitHub organization found (site links and web search). apiservices.unisuper.com.au was observed only as a host the homepage chat widget calls (inferred, not documented) and was not probed.
+  evidence:
+  - url: https://unisuper.com.au/
+    status: 200
+  - url: https://www.unisuper.com.au/
+    status: 200
+  - url: https://www.unisuper.com.au/about-us/terms-and-conditions
+    status: 200
+  - url: https://www.unisuper.com.au/about-us/privacy/privacy-statement
+    status: 200
+  - url: https://www.unisuper.com.au/news-and-insights
+    status: 200
+  - url: https://www.unisuper.com.au/contact-us
+    status: 200
+  - url: https://join.unisuper.com.au/personal-account/get-started
+    status: 200
+  - url: https://www.linkedin.com/company/unisuper
+    status: 200
+  - url: https://apps.apple.com/au/app/unisuper/id1614758946
+    status: 200
+  - url: https://play.google.com/store/apps/details?id=au.com.unisuper
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

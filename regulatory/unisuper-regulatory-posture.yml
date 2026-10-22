@@ -1,0 +1,123 @@
+generated: '2026-10-22'
+method: searched
+source:
+- https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+- https://www.unisuper.com.au/about-us/privacy/privacy-statement
+- https://www.unisuper.com.au/about-us/accessibility
+notes: >-
+  A plain GET of the privacy statement and terms pages returned an Imperva "Pardon Our Interruption"
+  interstitial (HTTP 200, 694 chars). The pages were then read with a headless browser. The Privacy Policy
+  PDF (dated December 2025, ref US25-0394 1225) linked from the privacy statement downloaded directly
+  (HTTP 200, application/pdf, 146963 bytes). The terms page was not re-read, and no signal is drawn from it.
+  The policy is written under the Australian Privacy Act 1988 and the 13 Australian Privacy Principles.
+  It does not cover AI, subprocessor lists, Global Privacy Control or age assurance, so nothing is
+  recorded for those signals.
+regime: Privacy Act 1988 (Cth), Australian Privacy Principles
+signals:
+  data_subject_request:
+    url: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+    section: Access and correction to personal information
+    rights_named: [access, correction]
+    escalation: Office of the Australian Information Commissioner (oaic.gov.au)
+    evidence:
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        UniSuper will provide you with copies of current personal information held about you upon request.
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        In each of these cases, UniSuper will provide you with reasons for the refusal.
+    - source: https://www.unisuper.com.au/about-us/privacy/privacy-statement
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Our Privacy Policy contains further information about how you may access any personal information
+        held by us, how to correct your information and how to make a complaint about a breach of the Privacy Act.
+    note: >-
+      APP-style rights to access and correction. Requests go to the Privacy Officer by letter, email or the
+      Helpline, and the policy lists grounds for refusal (unlawful, serious threat to health, legal
+      proceedings, privacy of others). No response time is stated, and deletion and portability are not named.
+  data_residency:
+    url: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+    section: Overseas disclosure of personal information
+    locations: [Canada, Japan, Singapore, United Kingdom, USA, European Union]
+    evidence:
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        The overseas locations to which your personal information may be disclosed are currently Canada,
+        Japan, Singapore, United Kingdom, USA and the European Union (EU).
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Where information is disclosed overseas, we will take reasonable steps to ensure the recipient of any
+        data has commensurate security systems to prevent misuse, loss or unauthorised disclosure in line with
+        Australian laws and standards.
+    note: >-
+      This is a disclosure of the countries data may flow to, not a residency commitment. Data is not
+      guaranteed to stay in Australia. A footnote ties the list to the Privacy Act requirement to name
+      offshore cloud-storage locations.
+  subprocessors:
+    url: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+    section: Disclosure of personal information to third parties
+    evidence:
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        UniSuper engages certain external organisations to assist in the provision of services to you (e.g.
+        mail-houses, auditors, insurers, actuaries, lawyers, anti-money laundering and fraud risk screening
+        service providers, technology partners and research consultants).
+    note: >-
+      Names categories of service providers, not a named subprocessor list. The policy gives no change-notice
+      mechanism.
+  incident_notification:
+    url: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+    section: Data breach response
+    evidence:
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        If your personal information were to be accessed or interfered with by unauthorised persons, we would
+        comply with any applicable legal obligations to notify you and provide redress.
+    note: >-
+      Commits to notifying affected people only as far as the law requires (in Australia, the Notifiable
+      Data Breaches scheme, which the policy does not name). No timeframe is stated.
+  data_retention:
+    url: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+    section: How does UniSuper hold and store your personal information?
+    evidence:
+    - source: https://www.unisuper.com.au/-/media/files/disclosures/privacy-policy.pdf?rev=d3a26d4730ad429181b2b29d2eb6efec&hash=CFCC196E0CBEFC6E96A846B278ADF9D6
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Any personal information held by UniSuper will be destroyed or permanently de-identified when it is no
+        longer needed for any purpose for which UniSuper might legitimately use or disclose it. We typically
+        retain information as required by our regulatory obligations and company requirements.
+    note: >-
+      Retention is tied to purpose and regulatory obligation, with no fixed periods. Destruction is suspended
+      for existing or anticipated legal proceedings.
+  accessibility_conformance:
+    url: https://www.unisuper.com.au/about-us/accessibility
+    standard: WCAG 2.0 AA (stated aim)
+    evidence:
+    - source: https://www.unisuper.com.au/about-us/accessibility
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        We’re aiming to meet W3C’s Web Content Accessibility Guidelines (WCAG) 2.0 AA rating for web content,
+        design and services.
+    - source: https://www.unisuper.com.au/about-us/accessibility
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        The colours used on our website maintain contrast ratios consistent with WCAG 2.0 Level AA requirements.
+    note: >-
+      An aspiration ("aiming to meet") against WCAG 2.0 AA, not a claim of conformance or an audited
+      statement. Colour contrast is the only criterion stated as met.

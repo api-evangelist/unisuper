@@ -1,0 +1,25 @@
+name: UniSuper pricing
+generated: '2026-10-22'
+method: searched
+source: https://www.unisuper.com.au/super/fees-and-costs
+audience: consumer
+pricing_basis: none
+published: true
+delivery:
+  delivery: managed
+plan_count: 1
+note: >-
+  UniSuper publishes no API or developer pricing. The page is a retail superannuation fee schedule for members
+  (example summary for the Balanced (MySuper) option across Personal Account, Accumulation 1, Accumulation 2 and DBD),
+  recorded here as a consumer fee schedule, not API pricing. Read via headless render on 2026-10-22; plain GETs may
+  receive an Imperva "Pardon Our Interruption" interstitial, so check-economics.py cannot fetch the source page from here; the price_text was copied verbatim from the rendered page text.
+plans:
+- name: Super products (Balanced MySuper example)
+  description: Example summary of fees based on the Balanced (MySuper) investment option for UniSuper super products.
+  price_text: $96 or 2% of your account balance (whichever is less) per year (maximum $8 per month).
+  features:
+  - 'Investment fees and costs 0.39% 2, 3, 5 per year.'
+  - 'Transaction costs 0.06% 3, 5 per year.'
+  - 'Buy-sell spread Not applicable.'
+  - 'Switching fee Not applicable.'
+  limits: []
